@@ -1,3 +1,4 @@
+/* exported onedit */
 function onedit(e) {
   if (
     e.range.getSheet().getName() === 'Скрипт "Внеси данные и не меняй"' &&

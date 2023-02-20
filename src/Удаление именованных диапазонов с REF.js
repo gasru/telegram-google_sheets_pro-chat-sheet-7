@@ -9,7 +9,8 @@ function removeNamedRangeWithREF_(sheet) {
   });
 }
 
-function run() {
+/* exported userActionRunRemoveNamedRengeREFs */
+function userActionRunRemoveNamedRengeREFs() {
   const sheet = SpreadsheetApp.getActive();
   removeNamedRangeWithREF_(sheet);
 }
