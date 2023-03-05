@@ -1,22 +1,6 @@
 {
   "timeZone": "Europe/Moscow",
-  "dependencies": {
-  },
+  "dependencies": {},
   "exceptionLogging": "STACKDRIVER",
-  "runtimeVersion": "V8",
-  "sheets": {
-    "macros": [{
-      "menuName": "Автозаполнение серии",
-      "functionName": "userActionAutoFillSeries",
-      "defaultShortcut": "Ctrl+Alt+Shift+1"
-    }, {
-      "menuName": "Автозаполнение текущим до конца данных",
-      "functionName": "userActionAutoFillCurrent",
-      "defaultShortcut": "Ctrl+Alt+Shift+2"
-    }, {
-      "menuName": "Автозаполнение текущим до конца листа",
-      "functionName": "userActionAutoFillCurrentSheetEnd",
-      "defaultShortcut": "Ctrl+Alt+Shift+3"
-    }]
-  }
+  "runtimeVersion": "V8"
 }
