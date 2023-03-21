@@ -5,10 +5,14 @@ const OBRABOTKA_SOBITIY_MASTER_SHEET = 'Обработка события изм
 /* exported CHECKING */
 function CHECKING(value) {
   const lastValue = PropertiesService.getScriptProperties().getProperty('LAST_VALUE');
-  if (lastValue != value) {
+  if (castValue_(lastValue) != castValue_(value)) {
     const fetch = UrlFetchApp.fetch(`${CURRENT_SCRIPT_URL}?value=${value}`);
     return fetch.getResponseCode();
   }
+}
+
+function castValue_(value) {
+  return String(value);
 }
 
 /* exported doGet */
