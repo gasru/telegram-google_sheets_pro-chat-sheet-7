@@ -12,6 +12,6 @@ function userActionRunBenchmarkCurrentSheet() {
 
   SpreadsheetApp.getUi().showModalDialog(
     template.evaluate().setHeight(400).setWidth(400),
-    'Запущена поверка. Дождитесь ссобщения!',
+    'Запущена поверка. Дождитесь сообщения!',
   );
 }
