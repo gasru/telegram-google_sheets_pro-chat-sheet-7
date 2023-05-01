@@ -1,3 +1,4 @@
+/* global activateLast */
 /* exported onOpen */
 function onOpen() {
   const ui = SpreadsheetApp.getUi();
@@ -7,4 +8,5 @@ function onOpen() {
     .addItem('▶️ Вставить несколько ссылок в ячейку', 'userActionsJoinLinks')
     .addItem('▶️ Расчет по кнопке из меню', 'userActionMakeCalculation')
     .addToUi();
+  activateLast();
 }
