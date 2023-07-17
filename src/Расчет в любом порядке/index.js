@@ -37,11 +37,9 @@ class Recalculator {
   }
 
   calc(params, fix) {
-    // SpreadsheetApp.getActive().toast(JSON.stringify(params));
     if (params.filter((p) => p === '' || isNaN(p)).length > 1)
       return params.map((p) => (isNaN(p) || p === '' ? '' : Number(p)));
     const index = params.map((p) => (isNaN(p) || p === '' ? '' : Number(p))).findIndex((p) => p === '');
-
     if (index === -1) return params.map((v, i) => (i === fix ? v : ''));
     const res = this.calcs[index](params);
     const out = [...params];
