@@ -11,7 +11,17 @@
     "no-var": "off",
     "valid-jsdoc": "off",
     "require-jsdoc": "off",
-    "guard-for-in": "off"
+    "guard-for-in": "off",
+    "comma-dangle": [
+      "error",
+      {
+        "arrays": "off",
+        "objects": "off",
+        "imports": "never",
+        "exports": "never",
+        "functions": "off"
+      }
+    ]
   },
   "parserOptions": { "ecmaVersion": 6 }
 }
