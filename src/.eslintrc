@@ -12,16 +12,7 @@
     "valid-jsdoc": "off",
     "require-jsdoc": "off",
     "guard-for-in": "off",
-    "comma-dangle": [
-      "error",
-      {
-        "arrays": "off",
-        "objects": "off",
-        "imports": "never",
-        "exports": "never",
-        "functions": "off"
-      }
-    ]
+    "comma-dangle": ["error", "never"]
   },
   "parserOptions": { "ecmaVersion": 6 }
 }

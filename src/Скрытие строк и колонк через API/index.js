@@ -49,7 +49,7 @@ function hideByRowNumbers() {
       if (a > b) return 1;
       return 0;
     })
-    .reduce((a, n, i, d) => {
+    .reduce((a, n, i) => {
       if (i === 0) {
         a.push({ startIndex: n, endIndex: n });
         return a;
