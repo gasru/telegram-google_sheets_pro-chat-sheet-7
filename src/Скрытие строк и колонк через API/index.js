@@ -36,8 +36,9 @@ function showHideRowsViaAPI(hide) {
   );
 }
 
-/// Скрыть по списку строк
+// Скрыть по списку строк
 
+/* exported hideByRowNumbers */
 function hideByRowNumbers() {
   const book = SpreadsheetApp.getActive();
   const sheet = book.getSheetByName('Скрытие строк и колонк через API');
