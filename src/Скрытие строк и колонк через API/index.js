@@ -6,6 +6,7 @@ function userActionShowRowsViaAPI() {
   showHideRowsViaAPI(false);
 }
 
+// Скрыть/показать строки через API
 function showHideRowsViaAPI(hide) {
   const book = SpreadsheetApp.getActive();
   const sheet = book.getSheetByName('Скрытие строк и колонк через API');
@@ -82,6 +83,40 @@ function hideByRowNumbers() {
   Sheets.Spreadsheets.batchUpdate(
     {
       requests
+    },
+    book.getId()
+  );
+}
+
+// Скрыть строку переданног диапазона
+
+/* exported hideRowOfRange */
+function hideRowOfRange() {
+  const book = SpreadsheetApp.getActive();
+  const sheet = book.getSheetByName('Скрытие строк и колонк через API');
+  sheet.activate();
+
+  // Тут нужно определить начало обновляемого диапазона
+  const startIndex = 3; // 3 - это четвертая строка
+
+  const request = {
+    updateDimensionProperties: {
+      fields: 'hiddenByUser',
+      properties: {
+        hiddenByUser: true
+      },
+      range: {
+        sheetId: sheet.getSheetId(),
+        dimension: 'ROWS',
+        startIndex: startIndex,
+        endIndex: startIndex + 1
+      }
+    }
+  };
+
+  Sheets.Spreadsheets.batchUpdate(
+    {
+      requests: [request]
     },
     book.getId()
   );
