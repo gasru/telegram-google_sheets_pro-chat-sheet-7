@@ -1,7 +1,9 @@
+/* exported userActionHideRowsViaAPI */
 function userActionHideRowsViaAPI() {
   showHideRowsViaAPI(true);
 }
 
+/* exported userActionShowRowsViaAPI */
 function userActionShowRowsViaAPI() {
   showHideRowsViaAPI(false);
 }
