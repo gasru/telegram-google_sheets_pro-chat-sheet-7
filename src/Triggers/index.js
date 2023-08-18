@@ -5,7 +5,7 @@ function onOpen() {
       SpreadsheetApp.getUi()
         .createMenu('Скрытие строк и колонк через API')
         .addItem('Скрыть строки', 'userActionHideRowsViaAPI')
-        .addItem('Отобразить строки', 'userActionShowRowsViaAPI'),
+        .addItem('Отобразить строки', 'userActionShowRowsViaAPI')
     )
     .addToUi();
 }

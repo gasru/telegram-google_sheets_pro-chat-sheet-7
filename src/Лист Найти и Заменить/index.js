@@ -28,7 +28,7 @@ function updateDVR_(range, value) {
   }
   const rule = SpreadsheetApp.newDataValidation().requireValueInList(
     list.filter((v, i, a) => a.indexOf(v) === i),
-    true,
+    true
   );
   range.setDataValidation(rule);
 }
