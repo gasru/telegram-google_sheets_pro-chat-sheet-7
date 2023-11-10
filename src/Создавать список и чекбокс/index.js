@@ -20,7 +20,6 @@ function addCompany_(companyName, contactName, informStatus, phone, email) {
   sheet.appendRow(newRow);
 
   const validations = sheet.getRange('2:2').getDataValidations();
-  // .map((r) => r.map((dv) => (dv ? dv.copy().build() : dv)));
 
   sheet.getRange(`${lr}:${lr}`).setDataValidations(validations);
 
