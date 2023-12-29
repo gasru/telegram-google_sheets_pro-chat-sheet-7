@@ -1,6 +1,22 @@
 {
   "timeZone": "Europe/Moscow",
-  "dependencies": {},
   "exceptionLogging": "STACKDRIVER",
-  "runtimeVersion": "V8"
+  "runtimeVersion": "V8",
+  "dependencies": {
+    "enabledAdvancedServices": [
+      {
+        "userSymbol": "Sheets",
+        "serviceId": "sheets",
+        "version": "v4"
+      }
+    ],
+    "libraries": [
+      {
+        "userSymbol": "CHATLIB",
+        "libraryId": "1PPjsWckqdyAm9G6STKOdS4lEUS01Mg9CHczxlFfQsSVIED8KQ1fACvVP",
+        "version": "1",
+        "developmentMode": false
+      }
+    ]
+  }
 }
