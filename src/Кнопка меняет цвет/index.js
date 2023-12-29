@@ -1,18 +1,22 @@
+/* exported userActionInitColorButtons */
 function userActionInitColorButtons() {
   const sheet = SpreadsheetApp.getActive();
   initImages_(sheet);
 }
 
+/* exported userActionClickRED */
 function userActionClickRED() {
   const sheet = SpreadsheetApp.getActive();
   switchColor_(sheet, 'userActionClickYELLOW');
 }
 
+/* exported userActionClickYELLOW */
 function userActionClickYELLOW() {
   const sheet = SpreadsheetApp.getActive();
   switchColor_(sheet, 'userActionClickGREEN');
 }
 
+/* exported userActionClickGREEN */
 function userActionClickGREEN() {
   const sheet = SpreadsheetApp.getActive();
   switchColor_(sheet, 'userActionClickRED');
