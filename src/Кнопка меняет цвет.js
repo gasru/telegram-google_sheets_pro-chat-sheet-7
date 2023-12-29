@@ -35,20 +35,23 @@ function switchColor_(sheet, cmd) {
 function initImages_(sheet) {
   const state = {
     userActionClickRED: {
-      source: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/07/Button_Icon_Red.svg/70px-Button_Icon_Red.svg.png',
-      image: undefined
+      source:
+        'https://upload.wikimedia.org/wikipedia/commons/thumb/0/07/Button_Icon_Red.svg/70px-Button_Icon_Red.svg.png',
+      image: undefined,
     },
     userActionClickYELLOW: {
-      source: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/Button_Icon_Yellow.svg/70px-Button_Icon_Yellow.svg.png',
-      image: undefined
+      source:
+        'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/Button_Icon_Yellow.svg/70px-Button_Icon_Yellow.svg.png',
+      image: undefined,
     },
     userActionClickGREEN: {
-      source: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Button_Icon_Green.svg/70px-Button_Icon_Green.svg.png',
-      image: undefined
-    }
-  }
+      source:
+        'https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Button_Icon_Green.svg/70px-Button_Icon_Green.svg.png',
+      image: undefined,
+    },
+  };
 
-  sheet.getImages().forEach(image => {
+  sheet.getImages().forEach((image) => {
     const scriptName = image.getScript();
     if (state[scriptName]) {
       state[scriptName].image = image;
