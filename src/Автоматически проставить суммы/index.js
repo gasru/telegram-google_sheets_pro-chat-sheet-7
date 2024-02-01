@@ -1,6 +1,7 @@
 /* exported userActionSetFormulasAuto */
 /**
  * Устанавливает формулы сумм в отчете согласно правилам
+ * @see https://docs.google.com/spreadsheets/d/1zPuzdN7EtTdnxsnZolrjEaBXACkBboy7DWpS4DKWV74/edit#gid=1542690128 Пример данных
  */
 function userActionSetFormulasAuto() {
   const book = SpreadsheetApp.getActive();
