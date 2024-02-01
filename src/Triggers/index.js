@@ -5,6 +5,9 @@ function onOpen() {
   SpreadsheetApp.getUi()
     .createMenu('Таблица чата')
     .addItem('Нажми меня', userActionHiMessage.name)
+    .addItem('Показать все скрытые листы', userActionShowAllHiddenSheets.name)
+    .addItem('Показать все скрытые листы Advanced', userActionShowAllHiddenSheetsAdvanced.name)
+    .addItem('Скрыть все листы', userActionHideAllSheetsAdvanced.name)
     .addSubMenu(
       SpreadsheetApp.getUi().createMenu('Примеры и вопросы').addItem('Копирование строк', userActionSample.name),
     )

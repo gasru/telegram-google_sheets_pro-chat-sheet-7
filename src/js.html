@@ -1,0 +1,7 @@
+<script>
+  var newWin = window.open('<?=url?>');
+  google.script.host.close();
+  newWin.onload = function () {
+    window.print();
+  };
+</script>
