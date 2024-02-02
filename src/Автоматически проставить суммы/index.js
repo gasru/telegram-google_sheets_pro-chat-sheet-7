@@ -19,10 +19,16 @@ function userActionSetFormulasAuto() {
       pos = i;
       return [cell];
     }
-    if (color === '#0f9d58' && i > pos + 2) {
-      const formula = `=SUM(J${pos + 2}:J${i})`;
-      pos = i;
-      return [formula];
+    if (color === '#0f9d58') {
+      if (i > pos + 2) {
+        const formula = `=SUM(J${pos + 2}:J${i})`;
+        pos = i;
+        return [formula];
+      } else if (i > pos + 1) {
+        const formula = `=SUM(J${i})`;
+        pos = i;
+        return [formula];
+      }
     }
     return [cell];
   });
