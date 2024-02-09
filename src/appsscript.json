@@ -1,14 +1,18 @@
 {
   "timeZone": "Europe/Moscow",
   "dependencies": {
-    "enabledAdvancedServices": [
-      {
-        "userSymbol": "Sheets",
-        "version": "v4",
-        "serviceId": "sheets"
-      }
-    ]
+    "enabledAdvancedServices": [{
+      "userSymbol": "Sheets",
+      "serviceId": "sheets",
+      "version": "v4"
+    }]
   },
   "exceptionLogging": "STACKDRIVER",
-  "runtimeVersion": "V8"
+  "runtimeVersion": "V8",
+  "sheets": {
+    "macros": [{
+      "menuName": "userActionSetFormulasAuto",
+      "functionName": "userActionSetFormulasAuto"
+    }]
+  }
 }
