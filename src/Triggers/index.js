@@ -8,6 +8,7 @@ function onOpen() {
     .addSubMenu(
       SpreadsheetApp.getUi().createMenu('Примеры и вопросы').addItem('Копирование строк', userActionSample.name),
     )
+    .addSubMenu(getDynamicMenu_(SpreadsheetApp.getUi(), 'Динамическое меню'))
     .addToUi();
 }
 
