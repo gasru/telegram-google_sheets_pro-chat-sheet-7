@@ -8,7 +8,7 @@
 
 ## Другие чаты и каналы
 
-- https://t.me/contributor_pw
-- https://t.me/contributor_pw_chat
-- https://t.me/gasru
-- https://t.me/googleappsscriptrc
+- <https://t.me/contributor_pw>
+- <https://t.me/contributor_pw_chat>
+- <https://t.me/gasru>
+- <https://t.me/googleappsscriptrc>
