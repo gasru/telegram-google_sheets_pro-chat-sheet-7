@@ -1,6 +1,14 @@
 {
   "timeZone": "Europe/Moscow",
-  "dependencies": {},
+  "dependencies": {
+    "libraries": [
+      {
+        "userSymbol": "RichTextAssistant",
+        "version": "1",
+        "libraryId": "1U7E6L1c9UuZEvkO0gMVynaQskw9WUnBOcEhI5V-ojsA3ESqA0fl93dJm"
+      }
+    ]
+  },
   "exceptionLogging": "STACKDRIVER",
   "runtimeVersion": "V8"
 }

@@ -1,8 +1,4 @@
 /**
- * @link https://ru.stackoverflow.com/q/1569625
- */
-
-/**
  * @typedef {{
  *   caption: string,
  *   functionName: string
