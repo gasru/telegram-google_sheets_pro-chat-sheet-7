@@ -17,6 +17,12 @@ function userActionHiMessage() {
 <style>
   * {
     font-family: Google Sans,Roboto,RobotoDraft,Helvetica,Arial,sans-serif;
+    background-color: #434343;
+    color: #f3f3f3;
+  }
+
+  a {
+    color: #3c78d8;
   }
 </style>
 <h2>Добро пожаловать в Таблицу чата!</h2>
