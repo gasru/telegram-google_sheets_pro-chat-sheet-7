@@ -21,10 +21,15 @@ function triggerActionOnEditFire(e) {
       return v;
     }
 
-    const cur = +(String(v).match(/^([\d.]+)/) || [undefined, 0])[1];
-    const gain = cur - prev;
-    const res = `${cur} (${gain > 0 ? '+' : ''}${gain})`;
-    prev = cur;
+    const cur = (String(v).match(/^([\d.]+)/) || [undefined, 'error'])[1]; // Извлекает нужное значение из текущей ячейки
+    if (cur === 'error') {
+      // Пустая ячейка? Пропускаем
+      return '';
+    }
+    const cur_ = +cur; // Конвертируем в число
+    const gain = cur_ - prev; // Вычисляем прирост
+    const res = `${cur_} (${gain > 0 ? '+' : ''}${gain})`; // Формируем вывод
+    prev = cur_; // Сохраняем как предыдущее значение
     return res;
   });
 
