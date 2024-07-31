@@ -2,11 +2,12 @@
 
 /* exported onOpen */
 function onOpen() {
-  SpreadsheetApp.getUi()
-    .createMenu('Таблица чата')
+  const ui = SpreadsheetApp.getUi();
+  ui.createMenu('Таблица чата')
     .addItem('Нажми меня', userActionHiMessage.name)
+    .addSubMenu(ui.createMenu('Примеры и вопросы').addItem('Копирование строк', userActionSample.name))
     .addSubMenu(
-      SpreadsheetApp.getUi().createMenu('Примеры и вопросы').addItem('Копирование строк', userActionSample.name),
+      ui.createMenu('Коррекция даты и времени').addItem('Выбрать дату и время...', userActionShowDateTimePicker.name),
     )
     .addToUi();
 }

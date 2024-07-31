@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <base target="_top">
+  </head>
+  <body>
+    <!-- <h2>Выбор даты и времени</h2> -->
+    <label for="date">Дата:</label>
+    <input type="date" id="date" name="date" value="<?= date ?>">
+    <br><br>
+    <label for="time">Время:</label>
+    <input type="time" id="time" name="time" value="<?= time ?>">
+    <br><br>
+    <button onclick="submitDateTime()">Применить</button>
+    <script>
+      function submitDateTime() {
+        var date = document.getElementById('date').value;
+        var time = document.getElementById('time').value;
+        google.script.run.setDateTimeFromPicker(date, time);
+        google.script.host.close();
+      }
+    </script>
+  </body>
+</html>

@@ -8,7 +8,7 @@ function triggerActionOnEditFire(e) {
   const sheet = range.getSheet();
   const row = range.getRow();
   const column = range.getColumn();
-  if (sheet.getName() !== 'Обработка ввода скриптом' || row === 1 || column === 1) {
+  if (sheet.getName() !== 'Обработка ввода скриптом1' || row === 1 || column === 1) {
     return;
   }
 

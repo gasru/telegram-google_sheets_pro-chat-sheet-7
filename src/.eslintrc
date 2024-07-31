@@ -8,7 +8,7 @@
   },
   "rules": {
     "prettier/prettier": "error",
-    "no-var": "off",
+    "no-var": "error",
     "valid-jsdoc": "off",
     "require-jsdoc": "off",
     "guard-for-in": "off"
