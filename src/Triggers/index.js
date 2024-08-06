@@ -8,6 +8,9 @@ function onOpen() {
     .addSubMenu(
       SpreadsheetApp.getUi().createMenu('Примеры и вопросы').addItem('Копирование строк', userActionSample.name),
     )
+    .addSubMenu(
+      SpreadsheetApp.getUi().createMenu('Сдвигать данные вниз').addItem('Сдвинуть сейчас', triggerActionMoveDown.name),
+    )
     .addToUi();
 }
 
