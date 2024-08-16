@@ -1,8 +1,22 @@
 {
   "timeZone": "Europe/Moscow",
   "dependencies": {
-    "enabledAdvancedServices": []
   },
   "exceptionLogging": "STACKDRIVER",
-  "runtimeVersion": "V8"
+  "runtimeVersion": "V8",
+  "sheets": {
+    "macros": [{
+      "menuName": "onOpen",
+      "functionName": "onOpen"
+    }, {
+      "menuName": "triggerActionMoveDown",
+      "functionName": "triggerActionMoveDown"
+    }, {
+      "menuName": "userActionHiMessage",
+      "functionName": "userActionHiMessage"
+    }, {
+      "menuName": "userActionSample",
+      "functionName": "userActionSample"
+    }]
+  }
 }
