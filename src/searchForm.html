@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <base target="_top" />
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+      }
+
+      input[type='text'] {
+        width: 100%;
+        padding: 8px;
+        margin-bottom: 10px;
+        box-sizing: border-box;
+      }
+
+      ul {
+        list-style: none;
+        padding: 0;
+        overflow-y: auto;
+        flex-grow: 1;
+      }
+
+      li {
+        padding: 5px;
+        cursor: pointer;
+      }
+
+      li:hover {
+        background-color: #f0f0f0;
+      }
+    </style>
+  </head>
+  <body>
+    <h3>Введите текст для поиска</h3>
+    <input type="text" id="searchBox" onkeyup="performSearch()" placeholder="Начните вводить..." />
+
+    <ul id="resultList"></ul>
+
+    <script>
+      var data = []; // Хранилище данных из справочника
+      var isDataLoaded = false; // Флаг, указывающий, что данные загружены
+
+      // Загружаем данные при загрузке страницы
+      function loadData() {
+        google.script.run
+          .withSuccessHandler(function (response) {
+            data = response; // Сохраняем данные
+            isDataLoaded = true; // Помечаем, что данные загружены
+            performSearch(); // Вызываем поиск сразу после загрузки данных (если пользователь что-то ввел)
+          })
+          .getDataFromSpreadsheet();
+      }
+
+      // Живой поиск по данным
+      function performSearch() {
+        // Проверяем, что данные загружены
+        if (!isDataLoaded) {
+          return;
+        }
+
+        var input = document.getElementById('searchBox').value.toLowerCase();
+        var resultList = document.getElementById('resultList');
+        resultList.innerHTML = ''; // Очищаем список перед каждым поиском
+
+        if (input.length > 0) {
+          var filteredData = data.filter(function (item) {
+            return item.toLowerCase().includes(input);
+          });
+
+          filteredData.forEach(function (item) {
+            var li = document.createElement('li');
+            li.textContent = item;
+            li.onclick = function () {
+              selectItem(item);
+            };
+            resultList.appendChild(li);
+          });
+        }
+      }
+
+      // Выбор элемента из списка
+      function selectItem(item) {
+        google.script.run.setSelectedValue(item);
+        google.script.host.close(); // Закрываем форму после выбора
+      }
+
+      window.onload = loadData;
+    </script>
+  </body>
+</html>

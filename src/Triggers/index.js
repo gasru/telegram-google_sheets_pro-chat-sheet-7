@@ -1,5 +1,21 @@
 /* global */
 
+function UF() {
+  var sheet = SpreadsheetApp.getActiveSpreadsheet().getActiveSheet();
+  var range = sheet.getRange('A1:A5');
+
+  var rule;
+  var rules = sheet.getConditionalFormatRules();
+  rule = SpreadsheetApp.newConditionalFormatRule()
+    .whenFormulaSatisfied(Formula)
+    .setBackground(Col1)
+    .setRanges([range])
+    .build();
+
+  rules.push(rule);
+  sheet.setConditionalFormatRules(rules);
+}
+
 /* exported onOpen */
 function onOpen() {
   SpreadsheetApp.getUi()
