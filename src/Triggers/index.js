@@ -6,7 +6,7 @@ function onOpen() {
     .createMenu('Таблица чата')
     .addItem('Нажми меня', userActionHiMessage.name)
     .addSubMenu(
-      SpreadsheetApp.getUi().createMenu('Примеры и вопросы').addItem('Копирование строк', userActionSample.name),
+      SpreadsheetApp.getUi().createMenu('Примеры и вопросы').addItem('Пример "Копирование строк"', userActionSample.name),
     )
     .addToUi();
 }
@@ -21,8 +21,8 @@ function userActionHiMessage() {
 </style>
 <h2>Добро пожаловать в Таблицу чата!</h2>
 <div>
-  <p>Чтобы создать новый лист, выберите любой незаблокированный, поттом передите в меню</p>
-  <p>Вы можете добавлять код Apps Script при необходимости</p>
+  <p>Чтобы создать новый лист, выберите любой незаблокированный, потом перейдите в основное меню</p>
+  <p>Вы можете добавить код Apps Script при необходимости</p>
 </div>
 <div>
   <p>
