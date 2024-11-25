@@ -1,4 +1,5 @@
-function Macro_1() {
+/* exported Macro1 */
+function Macro1() {
   var spreadsheet = SpreadsheetApp.getActive();
   spreadsheet.getRange('3:3').activate();
   spreadsheet.getActiveSheet().insertRowsBefore(spreadsheet.getActiveRange().getRow(), 1);

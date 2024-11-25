@@ -1,8 +1,9 @@
+/* exported send */
 function send() {
-  let topic = 'Транспортно-экспедиторские услуги';
-  let emailAdress = 'viapenkin@gmail.com';
-  let win = SpreadsheetApp.getUi();
-  let response = win.prompt('какой-то_текст', win.ButtonSet.OK);
+  const topic = 'Транспортно-экспедиторские услуги';
+  const emailAdress = 'viapenkin@gmail.com';
+  const win = SpreadsheetApp.getUi();
+  const response = win.prompt('какой-то_текст', win.ButtonSet.OK);
   if (response.getSelectedButton() == 'OK') {
     if (response.getResponseText() != '') {
       // let res="<mark>"+"<font size=5>"+"<font color=FF0000>"+"!Важно. Суммы по проектам "+response.getResponseText()+" не согласованы!<br><br><br>"+"</font>"+"</font>"+"</mark>"

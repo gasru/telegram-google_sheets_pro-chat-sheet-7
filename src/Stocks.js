@@ -43,6 +43,8 @@ function getWarehouseId(apiKey) {
     return null;
   }
 }
+
+/* exported getStockByWarehouse */
 function getStockByWarehouse(apiKey) {
   var warehouseId = getWarehouseId(apiKey);
 
