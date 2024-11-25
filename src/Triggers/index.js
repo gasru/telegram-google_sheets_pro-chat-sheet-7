@@ -6,7 +6,9 @@ function onOpen() {
     .createMenu('Таблица чата')
     .addItem('Нажми меня', userActionHiMessage.name)
     .addSubMenu(
-      SpreadsheetApp.getUi().createMenu('Примеры и вопросы').addItem('Пример "Копирование строк"', userActionSample.name),
+      SpreadsheetApp.getUi()
+        .createMenu('Примеры и вопросы')
+        .addItem('Пример "Копирование строк"', userActionSample.name),
     )
     .addToUi();
 }

@@ -2,5 +2,13 @@
   "timeZone": "Europe/Moscow",
   "dependencies": {},
   "exceptionLogging": "STACKDRIVER",
-  "runtimeVersion": "V8"
+  "runtimeVersion": "V8",
+  "sheets": {
+    "macros": [
+      {
+        "menuName": "Macro_1",
+        "functionName": "Macro_1"
+      }
+    ]
+  }
 }
